@@ -20,7 +20,7 @@ app.post("/insert", async (req, res) => {
   const foodName = req.body.foodName;
   const days = req.body.days;
   const food = new FoodModel({ foodName, daysSinceIAte: days });
-
+  //.
   try {
     await food.save();
     res.send("inserted data");
